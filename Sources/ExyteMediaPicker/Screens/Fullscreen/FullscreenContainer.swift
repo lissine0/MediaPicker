@@ -38,7 +38,6 @@ struct FullscreenContainer: View {
                 contentView(g.size)
             }
         }
-        .safeAreaPadding(.top, UIApplication.safeArea.top)
         .background {
             theme.main.fullscreenPhotoBackground
                 .ignoresSafeArea()
@@ -51,7 +50,7 @@ struct FullscreenContainer: View {
         .onDisappear {
             currentFullscreenMedia = nil
         }
-        .onChange(of: selection) {
+        .onChange(of: selection) { _ in
             if let selectedMediaModel {
                 currentFullscreenMedia = Media(source: selectedMediaModel)
             }

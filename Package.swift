@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "ExyteMediaPicker",
     platforms: [
-        .iOS(.v17)
+        .iOS(.v16)
     ],
     products: [
         .library(
@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/exyte/AnchoredPopup.git",
-            from: "1.1.3"
+            exact: "1.1.3"
         )
     ],
     targets: [
